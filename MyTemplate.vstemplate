@@ -1,0 +1,39 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>ASP.NET 8 Web Api Clean Code</Name>
+		<DefaultName>WebApiCleanCode</DefaultName>
+		<Description>Simple ASP.NET 8 Web Api template with Clean Code architecture</Description>
+		<Icon>__TemplateIcon.png</Icon>
+		<PreviewImage>__TemplateIcon.png</PreviewImage>
+		<ProjectType>CSharp</ProjectType>
+		<LanguageTag>CSharp</LanguageTag>
+		<PlatformTag>Windows</PlatformTag>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectCollection>
+			<SolutionFolder Name="src">
+				<ProjectTemplateLink ProjectName="$safeprojectname$.Api" CopyParameters="true">
+					src\Template.Api\MyTemplate.vstemplate
+				</ProjectTemplateLink>
+				<ProjectTemplateLink ProjectName="$safeprojectname$.Application" CopyParameters="true">
+					src\Template.Application\MyTemplate.vstemplate
+				</ProjectTemplateLink>
+				<ProjectTemplateLink ProjectName="$safeprojectname$.CrossCutting" CopyParameters="true">
+					src\Template.CrossCutting\MyTemplate.vstemplate
+				</ProjectTemplateLink>
+				<ProjectTemplateLink ProjectName="$safeprojectname$.Domain" CopyParameters="true">
+					src\Template.Domain\MyTemplate.vstemplate
+				</ProjectTemplateLink>
+				<ProjectTemplateLink ProjectName="$safeprojectname$.Infrastructure" CopyParameters="true">
+					src\Template.Infrastructure\MyTemplate.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+			<SolutionFolder Name="Test">
+				<ProjectTemplateLink ProjectName="$safeprojectname$.Test" CopyParameters="true">
+					test\Template.Test\MyTemplate.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+		</ProjectCollection>
+	</TemplateContent>
+</VSTemplate>
